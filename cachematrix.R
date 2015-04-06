@@ -43,10 +43,10 @@ cacheSolve <- function(x, ...) {
     mx <- x$get()
     
     #create the identity matrix with the right dimensions
-    md <- diag(dim(a)[1])
+    #md <- diag(dim(mx)[1])
     
-    #calculate the inverse 
-    ix <- solve(mx,md)
+    #calculate the inverse, equivalent to solve(mx,md) 
+    ix <- solve(mx)
     
     x$setinverse(ix)
     ix    
